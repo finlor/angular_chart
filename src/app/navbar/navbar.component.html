@@ -1,0 +1,32 @@
+<mat-sidenav-container>
+  <!--
+  nav bar burger responsive
+  -->
+  <mat-sidenav #sidenav>
+    <label>Javelot Demo</label>
+    <hr/>
+    <nav aria-label="Related links burger">
+      <a routerLink="home" (click)="clickHandler()" routerLinkActive="active">Home</a>
+      <a routerLink="temperature" (click)="clickHandler()" routerLinkActive="active">Temperature</a>
+    </nav>
+  </mat-sidenav>
+
+  <!--
+    nav bar grand ecran
+  -->
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <header>
+        <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+        <label>Javelot Demo</label>
+        <nav aria-label="Related links large nav">
+          <a routerLink="home" routerLinkActive="active">Home</a>
+          <a routerLink="temperature" routerLinkActive="active">temperature</a>
+        </nav>
+      </header>
+    </mat-toolbar>
+    <section>
+      <router-outlet></router-outlet>
+    </section>
+  </mat-sidenav-content>
+</mat-sidenav-container>

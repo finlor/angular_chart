@@ -1,0 +1,191 @@
+/**
+TABLE OF CONTENTS
+(1) BASE [LINE 19]
+(2) PADDING / MARGIN REM RANGES [LINE 28]
+(3) COLORS [LINE 37]
+(4) STATE COLORS [LINE 61]
+(5) HEADINGS [LINE 81]
+(6) BREAKPOINTS [LINE 127]
+(7) FORMS [LINE 136]
+(8) BUTTONS [LINE 164]
+**/
+
+
+/* -------------------------------------------------------------------------- */
+/*                                  (1) BASE                                  */
+/* -------------------------------------------------------------------------- */
+
+$base-rem-size: 15.5px !default;                    // Can be changed by setting your own HTML and body classes in your main SCSS file, WITHOUT having to change this variable.
+$base-font-family: "Inter", sans-serif !default;    // Can be changed by setting your own HTML and body classes in your main SCSS file, WITHOUT having to change this variable.
+$base-letter-spacing: -0.02rem !default;            // Can be changed by setting your own HTML and body classes in your main SCSS file, WITHOUT having to change this variable.
+
+
+/* -------------------------------------------------------------------------- */
+/*                       (2) PADDING / MARGIN REM RANGES                      */
+/* -------------------------------------------------------------------------- */
+
+$padding-max-rem-multiple: 30 !default; // maximum multiple of padding `rem` that can be applied to an element
+$margin-max-rem-multiple: 30 !default; // maximum multiple of margin `rem` that can be applied to an element
+
+
+/* -------------------------------------------------------------------------- */
+/*                                 (3) COLORS                                 */
+/* -------------------------------------------------------------------------- */
+// Main colors from each shade palette are between the medium and light shades
+
+/* --------------------------------- PRIMARY -------------------------------- */
+$primary-light-color: #FFD753 !default;
+$primary-color: #FFC400 !default;
+$primary-medium-color: #FFAB00 !default;
+$primary-dark-color: #FF991F !default;
+
+/* -------------------------------- SECONDARY ------------------------------- */
+$secondary-light-color: #79E2F2 !default;
+$secondary-color: #00C7E6 !default;
+$secondary-medium-color: #00B8D9 !default;
+$secondary-dark-color: #00A3BF !default;
+
+/* --------------------------------- ACCENT --------------------------------- */
+$accent-light-color: #FFBDAD !default;
+$accent-color: #FF8F73 !default;
+$accent-medium-color: #FF7452 !default;
+$accent-dark-color: #FF5630 !default;
+
+
+/* -------------------------------------------------------------------------- */
+/*                              (4) STATE COLORS                              */
+/* -------------------------------------------------------------------------- */
+
+/* --------------------------------- SUCCESS -------------------------------- */
+$success: #2ecc71 !default;
+$success-light: #7be9a9 !default;
+$success-dark: #156f3b !default;
+
+/* --------------------------------- WARNING -------------------------------- */
+$warning: #ffcd28 !default;
+$warning-light: #fce69d !default;
+$warning-dark: #ac8b1c !default;
+
+/* --------------------------------- DANGER --------------------------------- */
+$danger: #ff554c !default;
+$danger-light: #ffb3af !default;
+$danger-dark: #a2322c !default;
+
+
+/* -------------------------------------------------------------------------- */
+/*                                (5) HEADINGS                                */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------- HEADING 1 ------------------------------- */
+$h1-size: 2rem !default;
+$h1-height: 2rem !default;
+$h1-spacing: -0.1rem !default;
+$h1-weight: 700 !default;
+$h1-transform: none !default;
+
+/* -------------------------------- HEADING 2 ------------------------------- */
+$h2-size: 1.8rem !default;
+$h2-height: 1.8rem !default;
+$h2-spacing: -0.05rem !default;
+$h2-weight: 700 !default;
+$h2-transform: none !default;
+
+/* -------------------------------- HEADING 3 ------------------------------- */
+$h3-size: 1.6rem !default;
+$h3-height: 1.6rem !default;
+$h3-spacing: -0.05rem !default;
+$h3-weight: 700 !default;
+$h3-transform: none !default;
+
+/* -------------------------------- HEADING 4 ------------------------------- */
+$h4-size: 1.4rem !default;
+$h4-height: 1.4rem !default;
+$h4-spacing: -0.03rem !default;
+$h4-weight: 700 !default;
+$h4-transform: none !default;
+
+/* -------------------------------- HEADING 5 ------------------------------- */
+$h5-size: 1.2rem !default;
+$h5-height: 1.2rem !default;
+$h5-spacing: -0.03rem !default;
+$h5-weight: 700 !default;
+$h5-transform: none !default;
+
+/* -------------------------------- HEADING 6 ------------------------------- */
+$h6-size: 0.88rem !default;
+$h6-height: 0.88rem !default;
+$h6-spacing: 0.06rem !default;
+$h6-weight: 500 !default;
+$h6-transform: uppercase !default;
+
+
+/* -------------------------------------------------------------------------- */
+/*                               (6) BREAKPOINTS                              */
+/* -------------------------------------------------------------------------- */
+
+$mobile: 375px !default; // specifies if viewport between 0 to 375px wide ==> @include if-viewport(small) { styles }
+$desktop: 1200px !default; // specifies if viewport between 376px to 1200px wide ==> @include if-viewport(medium) { styles }
+
+
+/* -------------------------------------------------------------------------- */
+/*                                  (7) FORMS                                 */
+/* -------------------------------------------------------------------------- */
+
+/* ----------- STYLES APPLIED TO TEXT INPUTS AND SELECT DROPDOWNS ----------- */
+$form-control-border-radius: 0.2rem !default;
+$form-control-font-size: $base-rem-size !default;
+$form-control-min-height: $form-control-font-size * 2.3 !default;
+$form-control-spaces-between: 1.5rem;
+
+/* ---------------------------- TEXT INPUTS ONLY ---------------------------- */
+$form-input-font-family: inherit !default;
+$form-input-bg-color: #f0f0f0 !default;
+$form-input-padding-left: $form-control-min-height / 3.5;
+
+/* ------------------------- SELECT DROP DOWNS ONLY ------------------------- */
+$form-select-font-family: inherit !default;
+$form-select-bg-color: #f8f8f8 !default;
+
+/* --------------------------------- LABELS --------------------------------- */
+$form-label-font-size: 1rem !default;
+$form-label-font-family: inherit !default;
+$form-label-font-weight: 600 !default;
+$form-label-padding-left: 0.5rem !default;
+$form-label-padding-bottom: 0.5rem !default;
+$form-label-letter-spacing: auto !default;
+
+
+/* -------------------------------------------------------------------------- */
+/*                                 (8) BUTTONS                                */
+/* -------------------------------------------------------------------------- */
+
+/* --------------------------- BASELINE BTN STYLES -------------------------- */
+$button-font-size: 1rem !default;
+$button-border-radius: 0.2rem !default;
+$button-padding-top-bottom: 0.8rem !default;
+$button-padding-left-right: 1.2rem !default;
+
+/* ------------------------------ BUTTON SIZING ----------------------------- */ // NEW!
+$button-sm-size: scale(0.8) !default;
+$button-lg-size: scale(1.15) !default;
+
+/* ---------------------------- COLOR ATTRIBUTES ---------------------------- */ // NEW!
+$button-primary-color: $primary-dark-color !default;
+$button-secondary-color: $secondary-medium-color !default;
+$button-accent-color: $accent-medium-color !default;
+
+/* ----------------------- FONT COLORS & ALTERNATIVES ----------------------- */
+$button-primary-font-color: white !default;
+$button-primary-font-color-alt: black !default;
+$button-secondary-font-color: white !default;
+$button-secondary-font-color-alt: black !default;
+$button-accent-font-color: white !default;
+$button-accent-font-color-alt: black !default;
+
+/* ------------------------ ADDITIONAL BTN ATTRIBUTES ----------------------- */
+$pill-button-border-radius: 20px !default;
+$hover-filter-bright: brightness(1.15) !default;
+$hover-filter-dark: brightness(0.85) !default;
+$button-raised-box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.4) !default;
+$button-raised-box-shadow-hover: 4px 6px 12px rgba(0, 0, 0, 0.2) !default;
+$button-raised-box-shadow-active: 4px 6px 12px rgba(0, 0, 0, 0.1) !default;

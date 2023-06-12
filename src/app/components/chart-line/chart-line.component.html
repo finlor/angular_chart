@@ -1,0 +1,29 @@
+<div class="temperature choice">
+  <h3>Ville</h3>
+
+  <mat-form-field>
+    <mat-select [formControl]="selectedCityControl"
+                (selectionChange)="updateCity($event)">
+      <mat-option *ngFor="let city of dataCity" [value]="city">
+        {{city.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+</div>
+
+<div class="temperature graph">
+  <h1 class="title">
+    Données de température pour la ville de {{cityName}}
+  </h1>
+  <div class="chart-wrapper">
+    <canvas
+      baseChart
+      [type]="'line'"
+      [datasets]="lineChartData"
+      [labels]="lineChartLabel"
+      [options]="lineChartOptions"
+      [legend]="true"></canvas>
+  </div>
+</div>
+

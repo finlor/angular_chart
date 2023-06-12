@@ -1,0 +1,17 @@
+
+.chart-wrapper {
+display: flex;
+flex-flow: row nowrap;
+align-items: center;
+justify-content: space-around;
+margin: 20px;
+
+color: red;
+border-radius: 10px;
+}
+
+.title{
+  text-align: center;
+  margin: 20px;
+  font-family: Roboto, Verdana, sans-serif;
+}

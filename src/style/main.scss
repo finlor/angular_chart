@@ -1,0 +1,17 @@
+@import './variable.scss';
+
+
+* {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased !important;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+html, body {
+  font-size: $base-rem-size;
+  line-height: 5rem;
+  font-family: $base-font-family;
+  letter-spacing: $base-letter-spacing;
+}
+
