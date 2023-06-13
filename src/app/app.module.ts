@@ -20,12 +20,7 @@ import {MatIconModule} from "@angular/material/icon";
 import { NavbarComponent } from './navbar/navbar.component';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatSelectModule} from "@angular/material/select";
-import {FormControl, ReactiveFormsModule} from "@angular/forms";
-
-const appRoutes: Routes = [
-  { path: 'homepage', component: HomeComponent },
-  { path: 'chart', component: AppComponent },
-];
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -43,11 +38,6 @@ const appRoutes: Routes = [
     HttpClientModule,
     NgChartsModule,
     ReactiveFormsModule,
-    FormControl,
-    RouterModule.forRoot(
-      appRoutes,
-      {enableTracing: true} // <-- debugging purposes only
-    ),
     BrowserAnimationsModule,
     MatToolbarModule,
     MatSidenavModule,
@@ -55,9 +45,11 @@ const appRoutes: Routes = [
     MatListModule,
     MatIconModule,
     MatFormFieldModule,
-    MatSelectModule
+    MatSelectModule,
+    RouterModule,
   ],
-  providers: [DataService],
+  providers: [DataService,
+              AppComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
